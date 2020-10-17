@@ -13,7 +13,7 @@ def home():
 # for more pages
 
 
-@app.route('/eq/')
+@app.route('/equation/')
 def rec():
     return render_template('index.html')
 
