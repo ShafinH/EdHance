@@ -1,5 +1,7 @@
 from flask import Flask, request, jsonify, render_template
 from equations import equations
+from essayScorer import score_df
+from equations import equations
 import pandas as pd
 
 
@@ -33,7 +35,7 @@ def essay():
 
     essay = request.form['essay']
 
-    grade = essay.predict(essay)
+    grade = score_df.predict(essay)
 
     return render_template('index.html', grade)
 
@@ -41,9 +43,9 @@ def essay():
 @app.route('/plag', methods=['POST'])
 def plag():
 
-    image = request.form['eq']
+    plagiarism = request.form['plag']
 
-    plagiarism = plag.predict(image)
+    plagiarism = plag.predict(plagiarism)
 
     return render_template('index.html', plagiarism)
 
