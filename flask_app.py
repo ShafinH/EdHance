@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify, render_template
 from equations import equations
 from essayScorer import score_df
-from equations import equations
+from plag_detector import classifier
 import pandas as pd
 
 
@@ -45,7 +45,7 @@ def plag():
 
     plagiarism = request.form['plag']
 
-    plagiarism = plag.predict(plagiarism)
+    plagiarism = classifier.predict(plagiarism)
 
     return render_template('index.html', plagiarism)
 
