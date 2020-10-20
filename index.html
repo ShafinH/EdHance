@@ -176,6 +176,7 @@
         <center>  
           
           <label for="img">Select image:</label>
+          
           <input type="file" id="eq" name="eq">
         
           <br/>
@@ -200,7 +201,7 @@
           <br/>
 
           <div class="hide">
-            <b>19214</b>
+            <b> {{ answer }} </b>
           </div>
 
         </center>
@@ -242,7 +243,7 @@
           <br/>
           <center class="none">
 
-            <p>Your essay has been graded on a scale of <b>0-5</b> and has recieved a <b>3 (Intermediate)</b></p>
+            <p>Your essay has been graded on a scale of <b>0-5</b> and has recieved a <b>{{ grade }}</b></p>
 
             <p>We suggest working on your sentence sturcture, and orgnization a bit more, so it can be come the best possible essay you can write.</p>
 
@@ -296,7 +297,7 @@
 
           <center class="plagi">
 
-            <p>Your work has been classified as <b>No Plagiarism</b>! Congrats, your work is ready to go. Feel free to turn it in to your teacher with no worries!</p>
+            <p>Your work has been classified as <b>{{ plagirism }}</b>! Congrats, your work is ready to go. Feel free to turn it in to your teacher with no worries!</p>
          
           </center>
        

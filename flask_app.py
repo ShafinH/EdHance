@@ -23,9 +23,9 @@ def eq():
 
     image = request.form['eq']
 
-    output = equations.predict(image)
+    answer = equations.predict(image)
 
-    return render_template('index.html', output)
+    return render_template('index.html', answer)
 
 
 @app.route('/essay', methods=['POST'])
@@ -33,9 +33,9 @@ def essay():
 
     essay = request.form['essay']
 
-    output = essay.predict(essay)
+    grade = essay.predict(essay)
 
-    return render_template('index.html', output)
+    return render_template('index.html', grade)
 
 
 @app.route('/plag', methods=['POST'])
@@ -43,9 +43,9 @@ def plag():
 
     image = request.form['eq']
 
-    output = plag.predict(image)
+    plagiarism = plag.predict(image)
 
-    return render_template('index.html', output)
+    return render_template('index.html', plagiarism)
 
 
 if __name__ == "__main__":
