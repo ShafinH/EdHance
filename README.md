@@ -1,5 +1,5 @@
 # EdHance
-Enhancing the education experience for students and teachers with ML.
+Enhancing the education experience for students and teachers with machine learning.
 <br/>
 <br/>
 <b>Won First Overall & Best Data-Science Hack at MLH 2021 Season 
